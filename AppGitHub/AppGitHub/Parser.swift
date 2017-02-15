@@ -12,7 +12,7 @@ public enum ParseErros: Error {
     case invalidInput
 }
 
-/*protocol Parser {
+protocol Parser {
     
     func parseMainRequest(response: [String: Any]?) -> MainRequestModel?
 }
@@ -25,4 +25,4 @@ extension Parser {
         
         return try? MainRequestModel(info: response)
     }
-}*/
+}

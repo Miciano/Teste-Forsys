@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		7FDFA8E818883903630EB1D0 /* Pods_AppGitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3D665C07D32D4C04E649C6 /* Pods_AppGitHub.framework */; };
+		98BE5F661E54D95500979417 /* MainRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE5F651E54D95500979417 /* MainRequestModel.swift */; };
+		98BE5F681E54D99500979417 /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE5F671E54D99500979417 /* RequestService.swift */; };
+		98BE5F6A1E54D9D300979417 /* APIURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE5F691E54D9D300979417 /* APIURLs.swift */; };
+		98BE5F6C1E54D9E900979417 /* ResponseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE5F6B1E54D9E900979417 /* ResponseService.swift */; };
+		98BE5F6E1E54DA0E00979417 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE5F6D1E54DA0E00979417 /* ServerError.swift */; };
+		98BE5F701E54DA9100979417 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE5F6F1E54DA9100979417 /* RepositoriesViewController.swift */; };
+		98BE5F741E54DF4600979417 /* ImageProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE5F731E54DF4600979417 /* ImageProfile.swift */; };
+		98BE5F771E54DF7700979417 /* RequestImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE5F761E54DF7700979417 /* RequestImageService.swift */; };
+		98BE5F791E54E37C00979417 /* ConstraintsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE5F781E54E37C00979417 /* ConstraintsProtocol.swift */; };
 		98FD256D1E54D3E200DA6157 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FD256C1E54D3E200DA6157 /* AppDelegate.swift */; };
 		98FD25721E54D3E200DA6157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98FD25701E54D3E200DA6157 /* Main.storyboard */; };
 		98FD25741E54D3E200DA6157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98FD25731E54D3E200DA6157 /* Assets.xcassets */; };
@@ -22,6 +31,15 @@
 		2C3D665C07D32D4C04E649C6 /* Pods_AppGitHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppGitHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		663272BC9225D29719B638F9 /* Pods-AppGitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppGitHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppGitHub/Pods-AppGitHub.debug.xcconfig"; sourceTree = "<group>"; };
 		88004397C61EA1EEF23F6A7C /* Pods-AppGitHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppGitHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppGitHub/Pods-AppGitHub.release.xcconfig"; sourceTree = "<group>"; };
+		98BE5F651E54D95500979417 /* MainRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRequestModel.swift; sourceTree = "<group>"; };
+		98BE5F671E54D99500979417 /* RequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
+		98BE5F691E54D9D300979417 /* APIURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIURLs.swift; sourceTree = "<group>"; };
+		98BE5F6B1E54D9E900979417 /* ResponseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseService.swift; sourceTree = "<group>"; };
+		98BE5F6D1E54DA0E00979417 /* ServerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
+		98BE5F6F1E54DA9100979417 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
+		98BE5F731E54DF4600979417 /* ImageProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProfile.swift; sourceTree = "<group>"; };
+		98BE5F761E54DF7700979417 /* RequestImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestImageService.swift; sourceTree = "<group>"; };
+		98BE5F781E54E37C00979417 /* ConstraintsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsProtocol.swift; sourceTree = "<group>"; };
 		98FD25691E54D3E200DA6157 /* AppGitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppGitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98FD256C1E54D3E200DA6157 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98FD25711E54D3E200DA6157 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +81,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		98BE5F711E54DEFA00979417 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				98BE5F6F1E54DA9100979417 /* RepositoriesViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		98BE5F721E54DF3000979417 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				98BE5F731E54DF4600979417 /* ImageProfile.swift */,
+				98BE5F781E54E37C00979417 /* ConstraintsProtocol.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		98BE5F751E54DF5D00979417 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				98BE5F761E54DF7700979417 /* RequestImageService.swift */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		98FD25601E54D3E200DA6157 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +127,8 @@
 		98FD256B1E54D3E200DA6157 /* AppGitHub */ = {
 			isa = PBXGroup;
 			children = (
+				98BE5F721E54DF3000979417 /* Utils */,
+				98BE5F711E54DEFA00979417 /* ViewController */,
 				98FD257F1E54D41200DA6157 /* Extensions */,
 				98FD257E1E54D40A00DA6157 /* Requests */,
 				98FD256C1E54D3E200DA6157 /* AppDelegate.swift */,
@@ -98,8 +143,12 @@
 		98FD257E1E54D40A00DA6157 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				98BE5F751E54DF5D00979417 /* Images */,
 				98FD25801E54D41B00DA6157 /* Model */,
 				98FD25851E54D56E00DA6157 /* Parser.swift */,
+				98BE5F671E54D99500979417 /* RequestService.swift */,
+				98BE5F691E54D9D300979417 /* APIURLs.swift */,
+				98BE5F6B1E54D9E900979417 /* ResponseService.swift */,
 			);
 			name = Requests;
 			sourceTree = "<group>";
@@ -117,6 +166,8 @@
 			children = (
 				98FD258D1E54D76600DA6157 /* RepositoriesModel.swift */,
 				98FD258F1E54D7B000DA6157 /* OwnerModel.swift */,
+				98BE5F651E54D95500979417 /* MainRequestModel.swift */,
+				98BE5F6D1E54DA0E00979417 /* ServerError.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -245,11 +296,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98BE5F701E54DA9100979417 /* RepositoriesViewController.swift in Sources */,
+				98BE5F741E54DF4600979417 /* ImageProfile.swift in Sources */,
+				98BE5F6A1E54D9D300979417 /* APIURLs.swift in Sources */,
+				98BE5F681E54D99500979417 /* RequestService.swift in Sources */,
 				98FD25861E54D56E00DA6157 /* Parser.swift in Sources */,
+				98BE5F771E54DF7700979417 /* RequestImageService.swift in Sources */,
 				98FD25901E54D7B000DA6157 /* OwnerModel.swift in Sources */,
 				98FD256D1E54D3E200DA6157 /* AppDelegate.swift in Sources */,
+				98BE5F6E1E54DA0E00979417 /* ServerError.swift in Sources */,
 				98FD258C1E54D69600DA6157 /* DictionaryExtension.swift in Sources */,
+				98BE5F791E54E37C00979417 /* ConstraintsProtocol.swift in Sources */,
+				98BE5F661E54D95500979417 /* MainRequestModel.swift in Sources */,
 				98FD258E1E54D76600DA6157 /* RepositoriesModel.swift in Sources */,
+				98BE5F6C1E54D9E900979417 /* ResponseService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
