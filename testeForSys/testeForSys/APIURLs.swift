@@ -9,7 +9,5 @@
 import Foundation
 
 struct APIURLs {
-    
-    static let Main: String = ""
-    static let PullRequests: String = ""
+    static let Main: String = "https://api.github.com/search/repositories?q=language:Java&sort=stars&"
 }

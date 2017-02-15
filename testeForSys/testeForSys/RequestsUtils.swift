@@ -11,6 +11,10 @@ import Alamofire
 
 class RequestsUtils {
     
+    lazy var parse: ParseUtils = {
+        return ParseUtils()
+    }()
+    
     lazy var alamofireManager: SessionManager = {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 10
@@ -18,14 +22,14 @@ class RequestsUtils {
         return SessionManager(configuration: configuration)
     }()
     
-    func loadRepositories(completion:@escaping (_ response: MainResponse)->Void) {
+    func loadRepositories(page: Int, completion:@escaping (_ response: MainResponse)->Void) {
         
-        alamofireManager.request(APIURLs.Main, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON
-        { (response) in
+        alamofireManager.request("\(APIURLs.Main)page=\(page)", method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON
+        { [weak self] (response) in
             
             switch response.result {
             case .success(let value):
-                let _ = value as? [String: Any]
+                let resultValue = value as? [String: Any]
                 switch response.response?.statusCode ?? 0 {
                 case 500:
                     let error = ServerError(statusCode: 500, description: "Erro 500 Bad Access")
@@ -34,7 +38,8 @@ class RequestsUtils {
                     let error = ServerError(statusCode: response.response?.statusCode ?? 0, description: "Erro de categoria 400")
                     completion(.serverError(description: error))
                 case 200:
-                    print("200")
+                    let model = self?.parse.parseMainRequest(response: resultValue)
+                    print("200 = \(model)")
                 default:
                     completion(.invalidResponse)
                 }

@@ -12,8 +12,10 @@
 		9802C75A1E53B6F200F939FE /* RequestsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9802C7591E53B6F200F939FE /* RequestsUtils.swift */; };
 		9802C75C1E53B73D00F939FE /* ResponseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9802C75B1E53B73D00F939FE /* ResponseUtils.swift */; };
 		9802C7621E53B88500F939FE /* OwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9802C7611E53B88500F939FE /* OwnerModel.swift */; };
+		98AFA7291E53D6BE0084E836 /* ParseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AFA7281E53D6BE0084E836 /* ParseUtils.swift */; };
+		98AFA72C1E53DA4A0084E836 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AFA72B1E53DA4A0084E836 /* RepositoriesViewController.swift */; };
+		98AFA72F1E53E14D0084E836 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AFA72E1E53E14D0084E836 /* DictionaryExtension.swift */; };
 		98B285D81E5381E2006949A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B285D71E5381E2006949A4 /* AppDelegate.swift */; };
-		98B285DA1E5381E2006949A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B285D91E5381E2006949A4 /* ViewController.swift */; };
 		98B285DD1E5381E2006949A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B285DB1E5381E2006949A4 /* Main.storyboard */; };
 		98B285DF1E5381E2006949A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98B285DE1E5381E2006949A4 /* Assets.xcassets */; };
 		98B285E21E5381E2006949A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B285E01E5381E2006949A4 /* LaunchScreen.storyboard */; };
@@ -29,9 +31,11 @@
 		9802C7591E53B6F200F939FE /* RequestsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsUtils.swift; sourceTree = "<group>"; };
 		9802C75B1E53B73D00F939FE /* ResponseUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseUtils.swift; sourceTree = "<group>"; };
 		9802C7611E53B88500F939FE /* OwnerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnerModel.swift; sourceTree = "<group>"; };
+		98AFA7281E53D6BE0084E836 /* ParseUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseUtils.swift; sourceTree = "<group>"; };
+		98AFA72B1E53DA4A0084E836 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
+		98AFA72E1E53E14D0084E836 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		98B285D41E5381E2006949A4 /* testeForSys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testeForSys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B285D71E5381E2006949A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		98B285D91E5381E2006949A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		98B285DC1E5381E2006949A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		98B285DE1E5381E2006949A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98B285E11E5381E2006949A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +61,7 @@
 		9802C7551E53B5E000F939FE /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				9802C7601E53B86B00F939FE /* Model */,
+				9802C7601E53B86B00F939FE /* Models */,
 				9802C7561E53B65500F939FE /* RequestsUtils */,
 				9802C7571E53B69500F939FE /* APIURLs.swift */,
 			);
@@ -69,11 +73,12 @@
 			children = (
 				9802C7591E53B6F200F939FE /* RequestsUtils.swift */,
 				9802C75B1E53B73D00F939FE /* ResponseUtils.swift */,
+				98AFA7281E53D6BE0084E836 /* ParseUtils.swift */,
 			);
 			name = RequestsUtils;
 			sourceTree = "<group>";
 		};
-		9802C7601E53B86B00F939FE /* Model */ = {
+		9802C7601E53B86B00F939FE /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				9802C7611E53B88500F939FE /* OwnerModel.swift */,
@@ -81,7 +86,23 @@
 				98B3E21A1E53BB8200519A53 /* MainRequestModel.swift */,
 				98B3E21C1E53BE4000519A53 /* ServerError.swift */,
 			);
-			name = Model;
+			name = Models;
+			sourceTree = "<group>";
+		};
+		98AFA72A1E53DA380084E836 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				98AFA72B1E53DA4A0084E836 /* RepositoriesViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		98AFA72D1E53E13B0084E836 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				98AFA72E1E53E14D0084E836 /* DictionaryExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		98B285CB1E5381E1006949A4 = {
@@ -105,9 +126,10 @@
 		98B285D61E5381E2006949A4 /* TesteForSys */ = {
 			isa = PBXGroup;
 			children = (
+				98AFA72D1E53E13B0084E836 /* Extensions */,
+				98AFA72A1E53DA380084E836 /* ViewController */,
 				9802C7551E53B5E000F939FE /* Requests */,
 				98B285D71E5381E2006949A4 /* AppDelegate.swift */,
-				98B285D91E5381E2006949A4 /* ViewController.swift */,
 				98B285DB1E5381E2006949A4 /* Main.storyboard */,
 				98B285DE1E5381E2006949A4 /* Assets.xcassets */,
 				98B285E01E5381E2006949A4 /* LaunchScreen.storyboard */,
@@ -259,14 +281,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				98B3E21B1E53BB8200519A53 /* MainRequestModel.swift in Sources */,
-				98B285DA1E5381E2006949A4 /* ViewController.swift in Sources */,
 				9802C7581E53B69500F939FE /* APIURLs.swift in Sources */,
 				98B285D81E5381E2006949A4 /* AppDelegate.swift in Sources */,
 				98B3E2191E53B96800519A53 /* RepositoriesModel.swift in Sources */,
 				9802C7621E53B88500F939FE /* OwnerModel.swift in Sources */,
+				98AFA72F1E53E14D0084E836 /* DictionaryExtension.swift in Sources */,
 				9802C75A1E53B6F200F939FE /* RequestsUtils.swift in Sources */,
+				98AFA72C1E53DA4A0084E836 /* RepositoriesViewController.swift in Sources */,
 				9802C75C1E53B73D00F939FE /* ResponseUtils.swift in Sources */,
 				98B3E21D1E53BE4000519A53 /* ServerError.swift in Sources */,
+				98AFA7291E53D6BE0084E836 /* ParseUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D0364C32E04CEBB79DE545B /* Pods-testeForSys.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MCDF44DBT7;
 				INFOPLIST_FILE = testeForSys/Info.plist;
@@ -401,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93C1C5A03B73F8D5AE7ED509 /* Pods-testeForSys.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MCDF44DBT7;
 				INFOPLIST_FILE = testeForSys/Info.plist;

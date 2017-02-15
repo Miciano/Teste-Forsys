@@ -12,4 +12,14 @@ struct OwnerModel{
     
     let login: String
     let avatarUrl: String
+    
+    init(info: [String: Any]) throws  {
+        guard let login = info.loginKey,
+        let avatarUrl = info.avatarUrlKey else {
+            throw ParseErros.invalidInput
+        }
+        
+        self.login = login
+        self.avatarUrl = avatarUrl
+    }
 }
