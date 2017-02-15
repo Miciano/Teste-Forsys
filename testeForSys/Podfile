@@ -7,5 +7,6 @@ target 'testeForSys' do
 
   # Pods for testeForSys
   pod 'Alamofire', '~> 4.3'
+  pod 'AlamofireImage', '~> 3.1'
 
 end
