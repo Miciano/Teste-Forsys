@@ -8,16 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		891A84EA7C70B8C460C490DF /* Pods_testeForSys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7C81B8A881A8517EF1D02B /* Pods_testeForSys.framework */; };
+		9802C7581E53B69500F939FE /* APIURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9802C7571E53B69500F939FE /* APIURLs.swift */; };
+		9802C75A1E53B6F200F939FE /* RequestsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9802C7591E53B6F200F939FE /* RequestsUtils.swift */; };
+		9802C75C1E53B73D00F939FE /* ResponseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9802C75B1E53B73D00F939FE /* ResponseUtils.swift */; };
+		9802C7621E53B88500F939FE /* OwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9802C7611E53B88500F939FE /* OwnerModel.swift */; };
 		98B285D81E5381E2006949A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B285D71E5381E2006949A4 /* AppDelegate.swift */; };
 		98B285DA1E5381E2006949A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B285D91E5381E2006949A4 /* ViewController.swift */; };
 		98B285DD1E5381E2006949A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B285DB1E5381E2006949A4 /* Main.storyboard */; };
 		98B285DF1E5381E2006949A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98B285DE1E5381E2006949A4 /* Assets.xcassets */; };
 		98B285E21E5381E2006949A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B285E01E5381E2006949A4 /* LaunchScreen.storyboard */; };
+		98B3E2191E53B96800519A53 /* RepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E2181E53B96800519A53 /* RepositoriesModel.swift */; };
+		98B3E21B1E53BB8200519A53 /* MainRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E21A1E53BB8200519A53 /* MainRequestModel.swift */; };
+		98B3E21D1E53BE4000519A53 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3E21C1E53BE4000519A53 /* ServerError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4D0364C32E04CEBB79DE545B /* Pods-testeForSys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testeForSys.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testeForSys/Pods-testeForSys.debug.xcconfig"; sourceTree = "<group>"; };
 		93C1C5A03B73F8D5AE7ED509 /* Pods-testeForSys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testeForSys.release.xcconfig"; path = "Pods/Target Support Files/Pods-testeForSys/Pods-testeForSys.release.xcconfig"; sourceTree = "<group>"; };
+		9802C7571E53B69500F939FE /* APIURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIURLs.swift; sourceTree = "<group>"; };
+		9802C7591E53B6F200F939FE /* RequestsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsUtils.swift; sourceTree = "<group>"; };
+		9802C75B1E53B73D00F939FE /* ResponseUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseUtils.swift; sourceTree = "<group>"; };
+		9802C7611E53B88500F939FE /* OwnerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnerModel.swift; sourceTree = "<group>"; };
 		98B285D41E5381E2006949A4 /* testeForSys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testeForSys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B285D71E5381E2006949A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98B285D91E5381E2006949A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +36,9 @@
 		98B285DE1E5381E2006949A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98B285E11E5381E2006949A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98B285E31E5381E2006949A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98B3E2181E53B96800519A53 /* RepositoriesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesModel.swift; sourceTree = "<group>"; };
+		98B3E21A1E53BB8200519A53 /* MainRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRequestModel.swift; sourceTree = "<group>"; };
+		98B3E21C1E53BE4000519A53 /* ServerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
 		CA7C81B8A881A8517EF1D02B /* Pods_testeForSys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testeForSys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -40,10 +54,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9802C7551E53B5E000F939FE /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				9802C7601E53B86B00F939FE /* Model */,
+				9802C7561E53B65500F939FE /* RequestsUtils */,
+				9802C7571E53B69500F939FE /* APIURLs.swift */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
+		9802C7561E53B65500F939FE /* RequestsUtils */ = {
+			isa = PBXGroup;
+			children = (
+				9802C7591E53B6F200F939FE /* RequestsUtils.swift */,
+				9802C75B1E53B73D00F939FE /* ResponseUtils.swift */,
+			);
+			name = RequestsUtils;
+			sourceTree = "<group>";
+		};
+		9802C7601E53B86B00F939FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9802C7611E53B88500F939FE /* OwnerModel.swift */,
+				98B3E2181E53B96800519A53 /* RepositoriesModel.swift */,
+				98B3E21A1E53BB8200519A53 /* MainRequestModel.swift */,
+				98B3E21C1E53BE4000519A53 /* ServerError.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		98B285CB1E5381E1006949A4 = {
 			isa = PBXGroup;
 			children = (
-				98B285D61E5381E2006949A4 /* testeForSys */,
+				98B285D61E5381E2006949A4 /* TesteForSys */,
 				98B285D51E5381E2006949A4 /* Products */,
 				A9C9DDFDC0C7961585E0FB8C /* Pods */,
 				BB2D3F51F47E7E2E05FA92FA /* Frameworks */,
@@ -58,9 +102,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		98B285D61E5381E2006949A4 /* testeForSys */ = {
+		98B285D61E5381E2006949A4 /* TesteForSys */ = {
 			isa = PBXGroup;
 			children = (
+				9802C7551E53B5E000F939FE /* Requests */,
 				98B285D71E5381E2006949A4 /* AppDelegate.swift */,
 				98B285D91E5381E2006949A4 /* ViewController.swift */,
 				98B285DB1E5381E2006949A4 /* Main.storyboard */,
@@ -68,6 +113,7 @@
 				98B285E01E5381E2006949A4 /* LaunchScreen.storyboard */,
 				98B285E31E5381E2006949A4 /* Info.plist */,
 			);
+			name = TesteForSys;
 			path = testeForSys;
 			sourceTree = "<group>";
 		};
@@ -128,7 +174,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 98B285CF1E5381E1006949A4 /* Build configuration list for PBXProject "testeForSys" */;
+			buildConfigurationList = 98B285CF1E5381E1006949A4 /* Build configuration list for PBXProject "TesteForSys" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -202,7 +248,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -212,8 +258,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98B3E21B1E53BB8200519A53 /* MainRequestModel.swift in Sources */,
 				98B285DA1E5381E2006949A4 /* ViewController.swift in Sources */,
+				9802C7581E53B69500F939FE /* APIURLs.swift in Sources */,
 				98B285D81E5381E2006949A4 /* AppDelegate.swift in Sources */,
+				98B3E2191E53B96800519A53 /* RepositoriesModel.swift in Sources */,
+				9802C7621E53B88500F939FE /* OwnerModel.swift in Sources */,
+				9802C75A1E53B6F200F939FE /* RequestsUtils.swift in Sources */,
+				9802C75C1E53B73D00F939FE /* ResponseUtils.swift in Sources */,
+				98B3E21D1E53BE4000519A53 /* ServerError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +414,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		98B285CF1E5381E1006949A4 /* Build configuration list for PBXProject "testeForSys" */ = {
+		98B285CF1E5381E1006949A4 /* Build configuration list for PBXProject "TesteForSys" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				98B285E41E5381E2006949A4 /* Debug */,
@@ -377,6 +430,7 @@
 				98B285E81E5381E2006949A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
