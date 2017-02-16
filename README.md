@@ -6,7 +6,9 @@ Teste consistia em criar um aplicativo que use a API do GitHub, listando as melh
 
 ## Instalação
 
-Esse projeto usa CocoaPods, então verifique se você já tem ele instalado em sua maquina. Caso não tenha pode seguir a primeira parte desse tutorial: https://medium.com/@fabio.miciano/criando-uma-pokedex-com-swift-part-1-3-20b582cc2cde#.lgnhwauyw
+Esse projeto usa CocoaPods, então verifique se você já tem ele instalado em sua maquina. Caso não tenha, pode user o tutorial a seguir até a parte em que é citado o comando `pod setup --verbose`.
+
+Link do Tutorial: https://medium.com/@fabio.miciano/criando-uma-pokedex-com-swift-part-1-3-20b582cc2cde#.lgnhwauyw
 
 Depois com o CocoaPods instalado faça os passos abaixo.
 
