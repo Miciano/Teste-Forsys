@@ -29,6 +29,8 @@ class PullCell: UITableViewCell {
             self.statusPull.text = "Status: \(statusPull)"
         }
         
-        imageProfile.createPhoto(with: avatarURL, handlerSuccess: nil, handlerError: nil)
+        imageProfile.createPhoto(with: avatarURL) { _ in
+            self.imageProfile.isHidden = true
+        }
     }
 }

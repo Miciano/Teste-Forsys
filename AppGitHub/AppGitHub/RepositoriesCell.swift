@@ -36,6 +36,8 @@ class RepositoriesCell: UITableViewCell {
         self.stars.text = "\(stars)"
         self.userName.text = userName
         
-        imageProfile.createPhoto(with: urlAvatar, handlerSuccess: nil, handlerError: nil)
+        imageProfile.createPhoto(with: urlAvatar) { _ in
+            self.imageProfile.isHidden = true
+        }
     }
 }

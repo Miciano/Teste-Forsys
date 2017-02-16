@@ -22,7 +22,7 @@ class ImageProfile: UIView, ConstraintsProtocol {
         createCircleImage()
     }
     
-    func createPhoto(with url: String?, handlerSuccess:((_ image: UIImage?)->Void)?, handlerError:((_ description: ServerError)->Void)?) {
+    func createPhoto(with url: String?, handlerError:((_ description: ServerError)->Void)?) {
         
         removeChilds()
         createActivityView()
@@ -32,8 +32,6 @@ class ImageProfile: UIView, ConstraintsProtocol {
             switch response {
             case .success(let model):
                 self.insertPhoto(model)
-                guard let handlerSuccess = handlerSuccess else { return }
-                handlerSuccess(model)
             case .serverErro(let description):
                 guard let handlerError = handlerError else { return }
                 handlerError(description)
@@ -47,7 +45,7 @@ class ImageProfile: UIView, ConstraintsProtocol {
                 guard let handlerError = handlerError else { return }
                 handlerError(description)
             case .downloadCanceled( _):
-                self.createPhoto(with: url, handlerSuccess: handlerSuccess, handlerError: handlerError)
+                self.createPhoto(with: url, handlerError: handlerError)
             case .invalidResponse:
                 fatalError("Response invalido")
             }

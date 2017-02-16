@@ -103,14 +103,17 @@ class RepositoriesViewController: UITableViewController {
                 self.mainModel = model
                 self.incrementDataSource()
             case .noConnection(let description):
-                print("erro \(description)")
+                UIAlertController.alert(title: "Atenção", message: description.description, presenter: self, cancelButton: false, handler: nil)
             case .timeOut(let description):
-                self.tableView.reloadData()
-                print("erro \(description)")
+                UIAlertController.alert(title: "Atenção", message: description.description, presenter: self, cancelButton: false, handler: { _ in
+                    self.refreshAction()
+                })
             case .serverError(let description):
-                print("erro \(description)")
+                UIAlertController.alert(title: "Erro \(description.statusCode)", message: description.description, presenter: self, cancelButton: false, handler: nil)
             case .invalidResponse:
-                print("erro invalido")
+                UIAlertController.alert(title: "Erro", message: "Não prevemos esse caso, irei causar um fatalError", presenter: self, cancelButton: false, handler: {_ in
+                    fatalError("erro invalido")
+                })
             }
         }
     }

@@ -7,3 +7,20 @@
 //
 
 import Foundation
+import UIKit
+
+extension UIAlertController {
+    
+    static func alert(title:String, message:String, presenter: UIViewController, cancelButton:Bool, handler: ((UIAlertAction) -> Void)?)
+    {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: handler)
+        alert.addAction(action)
+        if cancelButton == true {
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alert.addAction(cancelAction)
+        }
+        
+        presenter.present(alert, animated: true, completion: nil)
+    }
+}
