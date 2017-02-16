@@ -66,6 +66,10 @@ class RepositoriesViewController: UITableViewController {
     //Retorna as celulas usadas
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        if indexPath.row >= dataSource.count || dataSource.count == 0 {
+            return tableView.dequeueReusableCell(withIdentifier: "empty", for: indexPath)
+        }
+        
         //Se for a ultima celula retorno a celula de load
         if indexPath.row == dataSource.count {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "loadCell") as? LoadCell else {
@@ -137,6 +141,7 @@ class RepositoriesViewController: UITableViewController {
                 UIAlertController.alert(title: "Atenção", message: description.description, presenter: self, cancelButton: false, handler: nil)
             case .timeOut(let description):
                 UIAlertController.alert(title: "Atenção", message: description.description, presenter: self, cancelButton: false, handler: { _ in
+                    KVNProgress.show(withStatus: "Carregando...")
                     self.refreshAction()
                 })
             case .serverError(let description):

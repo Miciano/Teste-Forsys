@@ -88,6 +88,7 @@ class PullRequestsViewController: UITableViewController {
                 UIAlertController.alert(title: "Atenção", message: description.description, presenter: self, cancelButton: false, handler: nil)
             case .timeOut(let description):
                 UIAlertController.alert(title: "Atenção", message: description.description, presenter: self, cancelButton: false, handler: { _ in
+                    KVNProgress.show(withStatus: "Carregando...")
                     self.refreshAction()
                 })
             case .serverError(let description):
