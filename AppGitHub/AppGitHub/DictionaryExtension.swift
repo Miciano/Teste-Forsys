@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+//Extension usada para facilitar a leitura de código ao procurar valores por chaves em um dicionario
+//Essa extension tambem serve para armazenar todas as chaves em um unico arquivo, facilitando assim manutenções futuras
+//As chaves podem ser reutilizadas em qualquer arquivo, sem a necessidade de criar duas chaves iguais
 extension Dictionary where Key: ExpressibleByStringLiteral, Value: Any {
     
     //PRAGMA MARK: -- MAIN REQUEST MODEL --

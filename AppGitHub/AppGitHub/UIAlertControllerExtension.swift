@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+//Extensio criada para encapsular o uso de uma alert, tendo sua implementação em um unico lugar
 extension UIAlertController {
     
     static func alert(title:String, message:String, presenter: UIViewController, cancelButton:Bool, handler: ((UIAlertAction) -> Void)?)

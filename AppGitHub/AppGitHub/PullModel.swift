@@ -10,13 +10,16 @@ import Foundation
 
 struct PullModel {
     
+    //PRAGMA MARK: -- PROPRIEDADES --
     let id: Int
     let status: String
     let title: String
     let body: String
     let user: OwnerModel?
     
+    //PRAGMA MARK: -- PARSE --
     init(info: [String: Any]) throws {
+        //Faço o parse utilizando da extension de dicionario, caso tenha algum problema retorno um erro
         guard let id = info.idKey,
         let status = info.statusKey,
         let title = info.titlekey,
@@ -25,6 +28,7 @@ struct PullModel {
              throw ParseErros.invalidInput
         }
         
+        //Preencho os valores das propriedades
         self.user = try? OwnerModel(info: userInfo)
         
         self.id = id

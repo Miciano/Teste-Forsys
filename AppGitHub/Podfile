@@ -8,5 +8,6 @@ target 'AppGitHub' do
   # Pods for AppGitHub
   pod 'Alamofire', '~> 4.3'
   pod 'AlamofireImage', '~> 3.1'
+  pod 'KVNProgress'
 
 end

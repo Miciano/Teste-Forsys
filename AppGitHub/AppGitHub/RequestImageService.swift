@@ -13,11 +13,14 @@ import AlamofireImage
 class RequestImageService {
     
     init() {
+        //Seto os tipos de imagem que serão feitas os downloads
         Alamofire.DataRequest.addAcceptableImageContentTypes(["image/jpg", "image/png", "image/jpeg"])
     }
     
+    //Função faz o download de imagem por url ou carrega a imagem que está em cache
     func loadImage(_ url: String?, completion:@escaping (_ response: ImageResponse)-> Void) {
         
+        //Faço unwrap da url
         guard let url = url, url != "",
             let urlRequest = URL(string: url) else {
                 let erro = ServerError(statusCode: 100, description: "URL Vazia")
@@ -26,6 +29,7 @@ class RequestImageService {
         }
         
         let imgView = UIImageView()
+        //Faço o request da imagem passando uma url e faço seus tratamentos de erro e sucesso
         imgView.af_setImage(withURL: urlRequest, placeholderImage: nil, filter: nil, progress: nil, progressQueue: DispatchQueue.main, imageTransition: UIImageView.ImageTransition.noTransition, runImageTransitionIfCached: false) { (response) in
             
             switch response.result

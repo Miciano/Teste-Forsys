@@ -10,6 +10,7 @@ import Foundation
 
 struct RepositoriesModel {
     
+    //PRAGMA MARK: -- PROPRIEDADES --
     let id: Int
     let name: String
     let owner: OwnerModel?
@@ -18,7 +19,9 @@ struct RepositoriesModel {
     let stargazersCount: Int
     let description: String
     
+    //PRAGMA MARK: -- PARSE --
     init(info: [String: Any]) throws {
+        //Faço o parse utilizando da extension de dicionario, caso tenha algum problema retorno um erro
         guard let id = info.idKey,
             let name = info.nameKey,
             let ownerInfo = info.ownerKey,
@@ -29,6 +32,7 @@ struct RepositoriesModel {
                 throw ParseErros.invalidInput
         }
         
+        //Preencho os valores das propriedades
         self.owner = try? OwnerModel(info: ownerInfo)
         
         self.id = id

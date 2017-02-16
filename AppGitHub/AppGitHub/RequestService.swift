@@ -11,6 +11,7 @@ import Alamofire
 
 class RequestService: Parser {
     
+    //Configuro o tempo de timeOut de request
     lazy var alamofireManager: SessionManager = {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 10
@@ -18,11 +19,11 @@ class RequestService: Parser {
         return SessionManager(configuration: configuration)
     }()
     
-    
+    //Função faz o request dos repositorios de acordo com a pagina
     func loadRepositories(page: Int, completion:@escaping (_ response: MainResponse)->Void) {
         
-        alamofireManager.request("\(APIURLs.Main)page=\(page)", method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON
-            { [weak self] (response) in
+        //Faço o request e seus tratamentos de erro e sucesso
+        alamofireManager.request("\(APIURLs.Main)page=\(page)", method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { [weak self] (response) in
                 
                 switch response.result {
                 case .success(let value):
@@ -55,8 +56,10 @@ class RequestService: Parser {
         }
     }
     
+    //Função faz o request dos pullsRequests de acordo com a url passada
     func loadPullRequest(url: String, completion:@escaping (_ response: PullResponse)-> Void) {
         
+        //Faço o request e seus tratamentos de erro e sucesso
         alamofireManager.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { [weak self] (response) in
             
             switch response.result {

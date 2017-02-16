@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+//Protocolo responsavel por facilitar o uso de constraints via código
 protocol ConstraintsProtocol {
     func addConstraints(_ item: AnyObject?, toItem: AnyObject, attributes:[NSLayoutAttribute], constants:[CGFloat])
 }
@@ -23,14 +24,16 @@ extension ConstraintsProtocol {
         var arrayContraints = [NSLayoutConstraint]()
         
         item.translatesAutoresizingMaskIntoConstraints = false
-        
+        //Passo por todos os atruibutos passados
         for attribute in attributes
         {
+            //Crio um contraint usando as constants passadas
             let constraint = NSLayoutConstraint(item: item, attribute: attribute, relatedBy: .equal, toItem: toItem, attribute: attribute, multiplier: 1.0, constant: constants[aux])
             arrayContraints.append(constraint)
             aux += 1
         }
         
+        //Adiciono as constraints
         toItem.addConstraints(arrayContraints)
     }
 }

@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class PullCell: UITableViewCell {
+    
+    //PRAGMA MARK: -- OUTLETS --
     @IBOutlet weak var titlePull: UILabel!
     @IBOutlet weak var bodyPull: UILabel!
     @IBOutlet weak var imageProfile: ImageProfile!
@@ -20,8 +22,10 @@ class PullCell: UITableViewCell {
         super.awakeFromNib()
     }
     
+    //Função preenche os Outlets e seta o visual da celula
     func configureCell(titlePull: String?, bodyPull: String?, userName: String?, statusPull: String?, avatarURL: String?) {
         
+        //Preencho os outlets com os valores passados
         self.titlePull.text = titlePull
         self.bodyPull.text = bodyPull
         self.userName.text = userName
@@ -29,6 +33,7 @@ class PullCell: UITableViewCell {
             self.statusPull.text = "Status: \(statusPull)"
         }
         
+        //Carrego a imagem, caso tenha erro escondo a view
         imageProfile.createPhoto(with: avatarURL) { _ in
             self.imageProfile.isHidden = true
         }

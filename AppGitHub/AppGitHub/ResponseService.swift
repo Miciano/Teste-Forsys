@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+//Tipos de sucesso e erro usadas no request de Repositorio
 enum MainResponse {
     case success(model: MainRequestModel?)
     case serverError(description: ServerError)
@@ -17,6 +18,7 @@ enum MainResponse {
     case invalidResponse
 }
 
+//Tipos de sucesso e erro usadas no request de PullRequests
 enum PullResponse {
     case success(model: [PullModel]?)
     case serverError(description: ServerError)
@@ -25,6 +27,7 @@ enum PullResponse {
     case invalidResponse
 }
 
+//Tipos de sucesso e erro usadas no request de Imagem
 enum ImageResponse {
     case success(model: UIImage?)
     case missingURL(description: ServerError)
