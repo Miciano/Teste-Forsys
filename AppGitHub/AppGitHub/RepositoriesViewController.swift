@@ -43,6 +43,7 @@ class RepositoriesViewController: UITableViewController {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "loadCell") as? LoadCell else {
                 return tableView.dequeueReusableCell(withIdentifier: "empty", for: indexPath)
             }
+            cell.activity.startAnimating()
             return cell
         }
         
@@ -97,17 +98,16 @@ class RepositoriesViewController: UITableViewController {
     fileprivate func incrementDataSource() {
      
         guard let items = mainModel?.items else { return }
-        print("Datasoucer Count = \(dataSource.count)")
         for item in items {
             dataSource.append(item)
         }
-        print("Datasoucer Count = \(dataSource.count)")
         self.tableView.reloadData()
     }
     
     func refreshAction() {
         page = 0
         mainModel = nil
+        dataSource.removeAll()
         loadRepositories()
     }
 }

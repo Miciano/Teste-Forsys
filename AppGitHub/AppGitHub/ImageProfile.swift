@@ -93,6 +93,7 @@ class ImageProfile: UIView, ConstraintsProtocol {
     
     fileprivate func removeActivityView() {
         
+        
         self.backgroundColor = UIColor.clear
         let activity = self.subviews.filter { $0 is UIActivityIndicatorView }
         activity.first?.removeFromSuperview()

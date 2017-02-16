@@ -10,8 +10,15 @@ import Foundation
 import UIKit
 
 enum MainResponse {
-    
     case success(model: MainRequestModel?)
+    case serverError(description: ServerError)
+    case timeOut(description: ServerError)
+    case noConnection(description: ServerError)
+    case invalidResponse
+}
+
+enum PullResponse {
+    case success(model: [PullModel]?)
     case serverError(description: ServerError)
     case timeOut(description: ServerError)
     case noConnection(description: ServerError)

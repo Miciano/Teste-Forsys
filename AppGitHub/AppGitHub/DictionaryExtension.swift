@@ -61,4 +61,21 @@ extension Dictionary where Key: ExpressibleByStringLiteral, Value: Any {
     var avatarUrlKey: String? {
         return self["avatar_url"] as? String
     }
+    
+    //PRAGMA MARK: -- PULL MODEL --
+    var statusKey: String? {
+        return self["state"] as? String
+    }
+    
+    var titlekey: String? {
+        return self["title"] as? String
+    }
+    
+    var bodyKey: String? {
+        return self["body"] as? String
+    }
+    
+    var userKey: [String: Any]? {
+        return self["user"] as? [String: Any]
+    }
 }

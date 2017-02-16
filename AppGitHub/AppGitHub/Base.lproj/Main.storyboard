@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--GitHub JavaPop-->
         <scene sceneID="M2D-8X-XsH">
             <objects>
                 <tableViewController id="gKa-1Q-BsJ" customClass="RepositoriesViewController" customModule="AppGitHub" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,7 +52,7 @@
                                             <color key="textColor" red="0.074509803920000006" green="0.30588235289999999" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ob4-su-tBs">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ob4-su-tBs">
                                             <rect key="frame" x="8" y="37" width="289" height="37.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
                                             <nil key="textColor"/>
@@ -145,7 +145,7 @@
                             <outlet property="delegate" destination="gKa-1Q-BsJ" id="Dj4-da-A3b"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="6nA-ef-hL0"/>
+                    <navigationItem key="navigationItem" title="GitHub JavaPop" id="6nA-ef-hL0"/>
                     <connections>
                         <segue destination="oeg-Vw-Izt" kind="show" identifier="pullsList" id="baQ-GP-r8J"/>
                     </connections>
@@ -158,18 +158,74 @@
         <scene sceneID="Ki0-z0-5eA">
             <objects>
                 <tableViewController id="oeg-Vw-Izt" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lu7-j6-GBr">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" sectionHeaderHeight="28" sectionFooterHeight="28" id="lu7-j6-GBr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WDa-g9-iUo">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pullCell" rowHeight="133" id="WDa-g9-iUo" customClass="PullCell" customModule="AppGitHub" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="133"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WDa-g9-iUo" id="4iO-4T-JA4">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Titulo do PullRequest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tew-6W-kqI">
+                                            <rect key="frame" x="8" y="8" width="359" height="19"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                            <color key="textColor" red="0.074509803920000006" green="0.30588235289999999" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLF-tv-hEK">
+                                            <rect key="frame" x="8" y="37" width="359" height="37.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVj-fe-l9v">
+                                            <rect key="frame" x="8" y="84.5" width="40" height="40"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="YaW-qa-WAv"/>
+                                                <constraint firstAttribute="width" constant="40" id="rzN-YD-E9p"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCb-jk-uYR">
+                                            <rect key="frame" x="68" y="98.5" width="46" height="12"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                            <color key="textColor" red="0.074509803920000006" green="0.30588235289999999" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: Closed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twX-Be-KeJ">
+                                            <rect key="frame" x="281.5" y="97" width="85.5" height="15.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tew-6W-kqI" firstAttribute="leading" secondItem="4iO-4T-JA4" secondAttribute="leadingMargin" id="3Nf-NM-Wma"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="DLF-tv-hEK" secondAttribute="trailing" id="52u-Fp-v2D"/>
+                                        <constraint firstItem="tew-6W-kqI" firstAttribute="top" secondItem="4iO-4T-JA4" secondAttribute="topMargin" id="69n-L1-F64"/>
+                                        <constraint firstItem="DLF-tv-hEK" firstAttribute="top" secondItem="tew-6W-kqI" secondAttribute="bottom" constant="10" id="CxN-Jv-2ni"/>
+                                        <constraint firstItem="YVj-fe-l9v" firstAttribute="leading" secondItem="4iO-4T-JA4" secondAttribute="leadingMargin" id="DE1-wg-r5M"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="twX-Be-KeJ" secondAttribute="trailing" id="Dqe-gw-gbT"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="YVj-fe-l9v" secondAttribute="bottom" id="EeG-Mr-mm8"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="tew-6W-kqI" secondAttribute="trailing" id="IGF-X4-sWr"/>
+                                        <constraint firstItem="YVj-fe-l9v" firstAttribute="top" secondItem="DLF-tv-hEK" secondAttribute="bottom" constant="10" id="MJ3-RM-mrA"/>
+                                        <constraint firstItem="twX-Be-KeJ" firstAttribute="centerY" secondItem="lCb-jk-uYR" secondAttribute="centerY" id="N8W-j0-Qd2"/>
+                                        <constraint firstItem="lCb-jk-uYR" firstAttribute="leading" secondItem="YVj-fe-l9v" secondAttribute="trailing" constant="20" id="QVM-3w-O7Y"/>
+                                        <constraint firstItem="lCb-jk-uYR" firstAttribute="centerY" secondItem="YVj-fe-l9v" secondAttribute="centerY" id="aUm-7I-EDS"/>
+                                        <constraint firstItem="DLF-tv-hEK" firstAttribute="leading" secondItem="4iO-4T-JA4" secondAttribute="leadingMargin" id="xKA-kB-pgU"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bodyPull" destination="DLF-tv-hEK" id="VT6-cq-iWp"/>
+                                    <outlet property="imageProfile" destination="YVj-fe-l9v" id="qqL-KA-xF5"/>
+                                    <outlet property="statusPull" destination="twX-Be-KeJ" id="epg-23-f3J"/>
+                                    <outlet property="titlePull" destination="tew-6W-kqI" id="t6G-zv-XOh"/>
+                                    <outlet property="userName" destination="lCb-jk-uYR" id="kIa-jm-ECA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -180,7 +236,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QY7-kV-R3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="182" y="-45"/>
+            <point key="canvasLocation" x="181.59999999999999" y="-45.42728635682159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1F1-5A-mYg">

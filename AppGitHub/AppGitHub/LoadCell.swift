@@ -15,7 +15,5 @@ class LoadCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        activity.startAnimating()
     }
 }

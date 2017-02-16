@@ -15,6 +15,8 @@ public enum ParseErros: Error {
 protocol Parser {
     
     func parseMainRequest(response: [String: Any]?) -> MainRequestModel?
+    
+    func parsePullRequest(response: [[String: Any]]?) -> [PullModel]?
 }
 
 extension Parser {
@@ -24,5 +26,14 @@ extension Parser {
         guard let response = response else { return nil }
         
         return try? MainRequestModel(info: response)
+    }
+    
+    func parsePullRequest(response: [[String: Any]]?) -> [PullModel]? {
+        
+        guard let response = response else { return nil }
+        
+        let model: [PullModel]? = try? response.flatMap(PullModel.init)
+        print("MODEL PULL --- \(model)")
+        return model
     }
 }
