@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import KVNProgress
 
 class PullRequestsViewController: UITableViewController {
     
@@ -30,6 +31,8 @@ class PullRequestsViewController: UITableViewController {
         }
         //Adiciono a Celula Empty na referencia da tabela
         tableView.register(UINib(nibName: "EmptyCell", bundle: nil), forCellReuseIdentifier: "empty")
+        
+        KVNProgress.show(withStatus: "Carregando...")
         
         //Caso tenha uma URL faço o load dos PullsRequests
         if let urlPull = urlPull, urlPull != "" {
@@ -75,6 +78,7 @@ class PullRequestsViewController: UITableViewController {
             
             //Se o refreshControl estiver na tela eu removo ele
             if self.refreshControl?.isRefreshing == true { self.refreshControl?.endRefreshing() }
+            KVNProgress.dismiss()
             
             switch response {
             case .success(let model):

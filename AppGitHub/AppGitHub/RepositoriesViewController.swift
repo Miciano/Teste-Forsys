@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import KVNProgress
 
 class RepositoriesViewController: UITableViewController {
     
@@ -37,6 +38,8 @@ class RepositoriesViewController: UITableViewController {
         
         //Adiciono a Celula Empty na referencia da tabela
         tableView.register(UINib(nibName: "EmptyCell", bundle: nil), forCellReuseIdentifier: "empty")
+        
+        KVNProgress.show(withStatus: "Carregando...")
     }
     
     //Função usada para preparar a troca de telas
@@ -124,7 +127,7 @@ class RepositoriesViewController: UITableViewController {
         
             //Se o refreshControl estiver na tela eu removo ele
             if self.refreshControl?.isRefreshing == true { self.refreshControl?.endRefreshing() }
-            
+            KVNProgress.dismiss()
             switch response {
             case .success(let model):
                 //Preencho o mainModel e incremento os resultados no dataSource
