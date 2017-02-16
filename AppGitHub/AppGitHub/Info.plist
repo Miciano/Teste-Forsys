@@ -36,6 +36,13 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>avatars.githubusercontent.com</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
 			<key>api.github.com</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>

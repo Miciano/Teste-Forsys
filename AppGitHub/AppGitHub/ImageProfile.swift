@@ -31,6 +31,7 @@ class ImageProfile: UIView, ConstraintsProtocol {
             
             switch response {
             case .success(let model):
+                self.insertPhoto(model)
                 guard let handlerSuccess = handlerSuccess else { return }
                 handlerSuccess(model)
             case .serverErro(let description):
@@ -55,6 +56,7 @@ class ImageProfile: UIView, ConstraintsProtocol {
     
     fileprivate func createActivityView()
     {
+        self.backgroundColor = UIColor.lightGray
         let activity = UIActivityIndicatorView(activityIndicatorStyle: .white)
         self.addSubview(activity)
         activity.startAnimating()
@@ -73,9 +75,26 @@ class ImageProfile: UIView, ConstraintsProtocol {
         self.clipsToBounds = true
     }
     
+    fileprivate func insertPhoto(_ image:UIImage?)
+    {
+        removeActivityView()
+        
+        let imageView = UIImageView(image: image)
+        self.insertSubview(imageView, at: 0)
+        addConstraints(imageView, toItem: self, attributes: [.top, .leading, .trailing, .bottom], constants: [0,0,0,0])
+    }
+    
+    
     fileprivate func removeChilds()
     {
         for view in self.subviews
         { view.removeFromSuperview() }
+    }
+    
+    fileprivate func removeActivityView() {
+        
+        self.backgroundColor = UIColor.clear
+        let activity = self.subviews.filter { $0 is UIActivityIndicatorView }
+        activity.first?.removeFromSuperview()
     }
 }

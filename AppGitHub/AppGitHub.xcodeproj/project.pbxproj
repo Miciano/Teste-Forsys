@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7FDFA8E818883903630EB1D0 /* Pods_AppGitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3D665C07D32D4C04E649C6 /* Pods_AppGitHub.framework */; };
+		989A65ED1E55E11B00AF795E /* LoadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A65EC1E55E11B00AF795E /* LoadCell.swift */; };
+		989A65EF1E55E13800AF795E /* RepositoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A65EE1E55E13800AF795E /* RepositoriesCell.swift */; };
 		98BE5F661E54D95500979417 /* MainRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE5F651E54D95500979417 /* MainRequestModel.swift */; };
 		98BE5F681E54D99500979417 /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE5F671E54D99500979417 /* RequestService.swift */; };
 		98BE5F6A1E54D9D300979417 /* APIURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE5F691E54D9D300979417 /* APIURLs.swift */; };
@@ -31,6 +33,8 @@
 		2C3D665C07D32D4C04E649C6 /* Pods_AppGitHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppGitHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		663272BC9225D29719B638F9 /* Pods-AppGitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppGitHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppGitHub/Pods-AppGitHub.debug.xcconfig"; sourceTree = "<group>"; };
 		88004397C61EA1EEF23F6A7C /* Pods-AppGitHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppGitHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppGitHub/Pods-AppGitHub.release.xcconfig"; sourceTree = "<group>"; };
+		989A65EC1E55E11B00AF795E /* LoadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadCell.swift; sourceTree = "<group>"; };
+		989A65EE1E55E13800AF795E /* RepositoriesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesCell.swift; sourceTree = "<group>"; };
 		98BE5F651E54D95500979417 /* MainRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRequestModel.swift; sourceTree = "<group>"; };
 		98BE5F671E54D99500979417 /* RequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
 		98BE5F691E54D9D300979417 /* APIURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIURLs.swift; sourceTree = "<group>"; };
@@ -81,9 +85,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		989A65EB1E55E10D00AF795E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				989A65EC1E55E11B00AF795E /* LoadCell.swift */,
+				989A65EE1E55E13800AF795E /* RepositoriesCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		98BE5F711E54DEFA00979417 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				989A65EB1E55E10D00AF795E /* Cell */,
 				98BE5F6F1E54DA9100979417 /* RepositoriesViewController.swift */,
 			);
 			name = ViewController;
@@ -297,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98BE5F701E54DA9100979417 /* RepositoriesViewController.swift in Sources */,
+				989A65ED1E55E11B00AF795E /* LoadCell.swift in Sources */,
 				98BE5F741E54DF4600979417 /* ImageProfile.swift in Sources */,
 				98BE5F6A1E54D9D300979417 /* APIURLs.swift in Sources */,
 				98BE5F681E54D99500979417 /* RequestService.swift in Sources */,
@@ -304,6 +319,7 @@
 				98BE5F771E54DF7700979417 /* RequestImageService.swift in Sources */,
 				98FD25901E54D7B000DA6157 /* OwnerModel.swift in Sources */,
 				98FD256D1E54D3E200DA6157 /* AppDelegate.swift in Sources */,
+				989A65EF1E55E13800AF795E /* RepositoriesCell.swift in Sources */,
 				98BE5F6E1E54DA0E00979417 /* ServerError.swift in Sources */,
 				98FD258C1E54D69600DA6157 /* DictionaryExtension.swift in Sources */,
 				98BE5F791E54E37C00979417 /* ConstraintsProtocol.swift in Sources */,
