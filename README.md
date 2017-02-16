@@ -1,6 +1,6 @@
 ## Descrição
 
-Teste realizado a pedido da ForSys.
+Teste realizado a pedido da FourSys.
 
 Teste consistia em criar um aplicativo que use a API do GitHub, listando as melhores APIs de Java de acordo com suas estrelas e mostrando seus PullRequests de cada API.
 
