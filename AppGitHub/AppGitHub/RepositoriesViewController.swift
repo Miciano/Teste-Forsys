@@ -18,6 +18,8 @@ class RepositoriesViewController: UITableViewController {
     fileprivate var mainModel: MainRequestModel?
     fileprivate var dataSource: [RepositoriesModel] = []
     fileprivate var page = 0
+    fileprivate var urlPullSelected: String?
+    fileprivate var nameRepositorieSelected: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,17 @@ class RepositoriesViewController: UITableViewController {
             tableView.addSubview(refreshControl)
         }
         
-        //loadRepositories()
+        tableView.register(UINib(nibName: "EmptyCell", bundle: nil), forCellReuseIdentifier: "empty")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let view = segue.destination as? PullRequestsViewController else { return }
+        view.urlPull = urlPullSelected
+        view.requests = request
+        view.title = nameRepositorieSelected
+        let backButton = UIBarButtonItem()
+        backButton.title = "Voltar"
+        navigationItem.backBarButtonItem = backButton
     }
     
     //PRAGMA MARK: -- TABLEVIEW DATA SOURCE --
@@ -53,12 +65,12 @@ class RepositoriesViewController: UITableViewController {
         
         let item = dataSource[indexPath.row]
         
-        cell.configureCell(repositorieName: item.name, descriptionRepositorie: item.description, forks: item.forks, stars: item.stargazersCount, userName: item.owner?.login, urlAvatar: item.owner?.avatarUrl)
+        cell.configureCell(repositorieName: item.name, descriptionRepositorie: item.description, forks: item.forks, stars: item.stargazersCount, userName: item.owner?.login, urlAvatar: item.owner?.avatarUrl, pullURL: item.pullsURL)
         
         return cell
     }
     
-    //PRAGMA MAR: -- TABLE VIEE DELEGATE --
+    //PRAGMA MARK: -- TABLE VIEW DELEGATE --
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         if indexPath.row == dataSource.count {
@@ -68,6 +80,14 @@ class RepositoriesViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let cell = tableView.cellForRow(at: indexPath) as? RepositoriesCell else { return }
+        self.urlPullSelected = cell.pullURL
+        self.nameRepositorieSelected = cell.repositorieName.text
+        performSegue(withIdentifier: "pullsList", sender: self)
     }
     
     //PRAGMA MARK: -- FUNCOES PRIVADAS --

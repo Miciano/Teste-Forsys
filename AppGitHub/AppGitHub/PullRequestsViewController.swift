@@ -17,7 +17,71 @@ class PullRequestsViewController: UITableViewController {
         return RequestService()
     }()
     
+    var dataSource: [PullModel]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(refreshAction), for: .valueChanged)
+        
+        if let refreshControl = refreshControl {
+            tableView.addSubview(refreshControl)
+        }
+        
+        tableView.register(UINib(nibName: "EmptyCell", bundle: nil), forCellReuseIdentifier: "empty")
+        
+        if let urlPull = urlPull, urlPull != "" {
+            loadPulls(url: urlPull)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let dataSource = dataSource else { return 0 }
+        return dataSource.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let pull = dataSource?[indexPath.row],
+            let cell = tableView.dequeueReusableCell(withIdentifier: "pullCell") as? PullCell else {
+            return tableView.dequeueReusableCell(withIdentifier: "empty", for: indexPath)
+        }
+        
+        cell.configureCell(titlePull: pull.title, bodyPull: pull.body, userName: pull.user?.login, statusPull: pull.status, avatarURL: pull.user?.avatarUrl)
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    fileprivate func loadPulls(url: String) {
+        
+        requests.loadPullRequest(url: url) { (response) in
+            
+            if self.refreshControl?.isRefreshing == true { self.refreshControl?.endRefreshing() }
+            
+            switch response {
+            case .success(let model):
+                self.dataSource = model
+                self.tableView.reloadData()
+            case .noConnection(let description):
+                print("erro \(description)")
+            case .timeOut(let description):
+                self.tableView.reloadData()
+                print("erro \(description)")
+            case .serverError(let description):
+                print("erro \(description)")
+            case .invalidResponse:
+                print("erro invalido")
+            }
+        }
+    }
+    
+    func refreshAction() {
+        dataSource = nil
+        if let urlPull = urlPull, urlPull != "" { loadPulls(url: urlPull) }
     }
 }

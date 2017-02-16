@@ -13,6 +13,8 @@
 		989A65F11E55FE0D00AF795E /* PullCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A65F01E55FE0D00AF795E /* PullCell.swift */; };
 		989A65F31E55FF5600AF795E /* PullModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A65F21E55FF5600AF795E /* PullModel.swift */; };
 		989A65F51E56041300AF795E /* PullRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A65F41E56041300AF795E /* PullRequestsViewController.swift */; };
+		989A65FC1E560CE500AF795E /* EmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 989A65FB1E560CE500AF795E /* EmptyCell.xib */; };
+		989A65FE1E5612A800AF795E /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A65FD1E5612A800AF795E /* UIAlertControllerExtension.swift */; };
 		98BE5F661E54D95500979417 /* MainRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE5F651E54D95500979417 /* MainRequestModel.swift */; };
 		98BE5F681E54D99500979417 /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE5F671E54D99500979417 /* RequestService.swift */; };
 		98BE5F6A1E54D9D300979417 /* APIURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE5F691E54D9D300979417 /* APIURLs.swift */; };
@@ -41,6 +43,8 @@
 		989A65F01E55FE0D00AF795E /* PullCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullCell.swift; sourceTree = "<group>"; };
 		989A65F21E55FF5600AF795E /* PullModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullModel.swift; sourceTree = "<group>"; };
 		989A65F41E56041300AF795E /* PullRequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullRequestsViewController.swift; sourceTree = "<group>"; };
+		989A65FB1E560CE500AF795E /* EmptyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyCell.xib; sourceTree = "<group>"; };
+		989A65FD1E5612A800AF795E /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		98BE5F651E54D95500979417 /* MainRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRequestModel.swift; sourceTree = "<group>"; };
 		98BE5F671E54D99500979417 /* RequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
 		98BE5F691E54D9D300979417 /* APIURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIURLs.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 				989A65EC1E55E11B00AF795E /* LoadCell.swift */,
 				989A65EE1E55E13800AF795E /* RepositoriesCell.swift */,
 				989A65F01E55FE0D00AF795E /* PullCell.swift */,
+				989A65FB1E560CE500AF795E /* EmptyCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				98FD258B1E54D69600DA6157 /* DictionaryExtension.swift */,
+				989A65FD1E5612A800AF795E /* UIAlertControllerExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98FD25771E54D3E200DA6157 /* LaunchScreen.storyboard in Resources */,
+				989A65FC1E560CE500AF795E /* EmptyCell.xib in Resources */,
 				98FD25741E54D3E200DA6157 /* Assets.xcassets in Resources */,
 				98FD25721E54D3E200DA6157 /* Main.storyboard in Resources */,
 			);
@@ -323,6 +330,7 @@
 				989A65ED1E55E11B00AF795E /* LoadCell.swift in Sources */,
 				989A65F31E55FF5600AF795E /* PullModel.swift in Sources */,
 				98BE5F741E54DF4600979417 /* ImageProfile.swift in Sources */,
+				989A65FE1E5612A800AF795E /* UIAlertControllerExtension.swift in Sources */,
 				98BE5F6A1E54D9D300979417 /* APIURLs.swift in Sources */,
 				98BE5F681E54D99500979417 /* RequestService.swift in Sources */,
 				98FD25861E54D56E00DA6157 /* Parser.swift in Sources */,

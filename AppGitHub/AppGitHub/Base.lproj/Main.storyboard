@@ -131,14 +131,6 @@
                                     <outlet property="userName" destination="pMY-Oj-7WG" id="Opr-W3-Rqy"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="empty" id="kSs-rY-tDz">
-                                <rect key="frame" x="0.0" y="190" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kSs-rY-tDz" id="tuT-Fx-5ne">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="gKa-1Q-BsJ" id="CUI-G0-SAx"/>
@@ -154,10 +146,10 @@
             </objects>
             <point key="canvasLocation" x="-663.20000000000005" y="-45.42728635682159"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Pull Requests View Controller-->
         <scene sceneID="Ki0-z0-5eA">
             <objects>
-                <tableViewController id="oeg-Vw-Izt" sceneMemberID="viewController">
+                <tableViewController id="oeg-Vw-Izt" customClass="PullRequestsViewController" customModule="AppGitHub" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" sectionHeaderHeight="28" sectionFooterHeight="28" id="lu7-j6-GBr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,7 +174,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVj-fe-l9v">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVj-fe-l9v" customClass="ImageProfile" customModule="AppGitHub" customModuleProvider="target">
                                             <rect key="frame" x="8" y="84.5" width="40" height="40"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>

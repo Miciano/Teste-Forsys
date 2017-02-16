@@ -18,11 +18,17 @@ class RepositoriesCell: UITableViewCell {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var imageProfile: ImageProfile!
     
+    var pullURL: String?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configureCell(repositorieName: String?, descriptionRepositorie: String?, forks: Int, stars: Int, userName: String?, urlAvatar: String?) {
+    func configureCell(repositorieName: String?, descriptionRepositorie: String?, forks: Int, stars: Int, userName: String?, urlAvatar: String?, pullURL: String?) {
+        
+        if let urlSplited = pullURL?.characters.split(separator: "{").map(String.init) {
+            self.pullURL = "\(urlSplited[0])?state=all"
+        }
         
         self.repositorieName.text = repositorieName
         self.descriptionRepositorie.text = descriptionRepositorie

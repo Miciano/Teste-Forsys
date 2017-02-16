@@ -33,7 +33,6 @@ extension Parser {
         guard let response = response else { return nil }
         
         let model: [PullModel]? = try? response.flatMap(PullModel.init)
-        print("MODEL PULL --- \(model)")
         return model
     }
 }
