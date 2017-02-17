@@ -66,7 +66,7 @@ class RepositoriesViewController: UITableViewController {
     //Retorna as celulas usadas
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row >= dataSource.count || dataSource.count == 0 {
+        if indexPath.row >= dataSource.count {
             return tableView.dequeueReusableCell(withIdentifier: "empty", for: indexPath)
         }
         
